@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+background: #671f7d;
+}
+.img-gallery { 
+  width: 100%;
+  margin: 100px auto 50px;
+  display: grid;
+
+  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)) ;
+  grid-gap: 30px;
+
+
+}
+.img-gallery img {
+width: 100%;
+height: 100px;
+cursor: pointer;
+object-fit: cover;
+}         
+.img-gallery img:hover {
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}
+
+.full-img{
+  width: 100%;
+  height: 100vh; 
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img img {
+  max-width: 80%;  /* Set the maximum width of the image to 80% of the viewport */
+  max-height: 80%; /* Set the maximum height of the image to 80% of the viewport */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+  border-radius: 10px; /* Optional: Add some rounding for a nicer look */
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better contrast */
+}
+.full-img span{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+}
+
+figure {
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+}
+
+figcaption {
+  margin-top: 8px;
+  color: #555;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(400%); /* Adjust position to center */
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  z-index: 101; /* Make sure buttons are above the image */
+}
+
+.prev {
+  left: 10px; /* Position on the left edge */
+}
+
+.next {
+  right: 10px; /* Position on the right edge */
+}
