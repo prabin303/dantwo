@@ -72,7 +72,7 @@ figcaption {
 .prev, .next {
   position: absolute;
   top: 50%; /* Center vertically */
-  transform: translateY(400%); /* Adjust position to center */
+  transform: translateY(600%); /* Adjust position to center */
   font-size: 40px;
   color: white;
   cursor: pointer;
