@@ -4,7 +4,8 @@
     font-family: sans-serif;
 }
 body{
-background: #671f7d;
+background-image: url('10.jpg');
+
 }
 .img-gallery { 
   width: 100%;
